@@ -9,6 +9,27 @@ app.use(express.static("public"))
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Connecting to MongoDB
+mongoose.connect('mongodb://localhost:27017/social-loginDB', {useNewUrlParser: true})
+.then(() => console.log('MongoDB Connected...'))
+.catch(() => console.log('Error connecting to MongoDB...'));
+
+
+// Creating DB Schema
+const user = new mongoose.Schema({
+    firstName: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true
+    }
+});
 
 app.get('/login', (req, res) => {
     res.render('login');
