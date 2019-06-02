@@ -2,21 +2,34 @@
 
 
 <body class="text-center">
-  <form action="/register" class="form-signin" method="POST">
-    <img class="mb-4" src="img/icons8-lock-96.png" alt="" width="200" height="200">
-    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-    
-    <input name="username" type="username" class="form-control bottom" placeholder="Username" required>
-    <input name="email" type="email" class="form-control bottom" placeholder="Email" required>
-    <input name="password" type="password" class="form-control bottom" placeholder="Password" required>
-
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up</button>
-    <button class="btn btn-block btn-social btn-google" type="submit"><span class="fa fa-google"></span>Register with Google</button>
-    <button class="btn btn-block btn-social btn-facebook" type="submit"><span class="fa fa-facebook"></span>Register with Facebook</button>
-    <button class="btn btn-block btn-social btn-linkedin" type="submit"><span class="fa fa-linkedin"></span>Register with LinkedIn</button>
-    <button class="btn btn-block btn-social btn-github" type="submit"><span class="fa fa-github"></span>Register with GitHub</button>
-    <p class="mt-5 mb-3 text-muted">&copy; Social Login App</p>
-  </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <div class="card-body">
+            <form action="/register" class="form-signin" method="POST">
+              <img class="mb-4" src="img/icons8-lock-96.png" alt="" width="200" height="200">
+              <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+              
+              <input name="username" type="username" class="form-control bottom" placeholder="Username">
+              <input name="email" type="email" class="form-control bottom" placeholder="Email">
+              <input name="password" type="password" class="form-control bottom" placeholder="Password">
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me Up</button>
+            </form>
+            <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button"><span class="fa fa-google"></span>Register with Google</a>
+            <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook" role="button"><span class="fa fa-facebook"></span>Register with Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                
+                <!-- <button class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span><a href="/auth/google"></a>Register with Google</button>
+                <button class="btn btn-block btn-social btn-facebook" type="submit"><span class="fa fa-facebook"></span>Register with Facebook</button>
+                <button class="btn btn-block btn-social btn-linkedin" type="submit"><span class="fa fa-linkedin"></span>Register with LinkedIn</button>
+                <button class="btn btn-block btn-social btn-github" type="submit"><span class="fa fa-github"></span>Register with GitHub</button>
+                <p class="mt-5 mb-3 text-muted">&copy; Social Login App</p>
+               -->
 
 
 <%- include('partials/footer') %>
